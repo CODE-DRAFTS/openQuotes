@@ -4,7 +4,7 @@
 
 ### DOCUMENTATION
 to use this api make a get request to the following url <br>
-<pre>    https:openquotes.herokuapp.com/quotes/random  <br>  </pre>
+<pre>    https://openquotes.herokuapp.com/quotes/random  <br>  </pre>
     
 ### DEVELOPMENT
 openquotes was developed with python framework fastapi. <br>
