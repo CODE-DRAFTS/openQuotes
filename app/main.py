@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 import psycopg2
 from  psycopg2.extras  import RealDictCursor
 from app import env
@@ -16,6 +17,16 @@ while True:
 
         
 app = FastAPI()
+
+origins = ["*"] #domain names allowed to access the website
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 app.include_router( quotes.router)
 app.include_router( authors.router)
